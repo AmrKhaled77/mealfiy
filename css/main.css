@@ -1,0 +1,28 @@
+/* global styl */
+:root{
+    --color-primary: hsl( 0, 84%, 44% );
+}
+
+a{
+    text-decoration: none;
+}
+
+
+/* end global styl */
+
+
+
+/* start header  */
+
+.logo a{
+    font-size: 30px;
+    color: black;
+}
+
+.logo::after{
+    content: ".";
+    color: var(--color-primary);
+}
+
+
+/* end header  */
