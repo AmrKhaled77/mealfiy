@@ -188,10 +188,10 @@ li{
 
 
 .header{
-    position: relative;
+   
     display: flex;
     align-items: center;
-    top: 90px;
+   
     background-color: #EEEEEE;
     min-height:  100vb;
 }
@@ -219,6 +219,7 @@ padding-bottom: 35px;
 
 }
 .header .right-section{
+    margin-top: 8%;
     
         width: 40%;
     }
@@ -246,6 +247,7 @@ padding-bottom: 35px;
     }
 
 .header .left-section{
+    margin-top: 8%;
     display: flex;
     justify-content: flex-end;
 
@@ -311,3 +313,122 @@ width: 100%;
 
  
 /* end header  */
+
+
+
+
+/* start chefs */
+
+.chefs{
+    height: 400px;
+    background-color: #E61414;
+}
+.chefs .title{
+    padding-block: 6%;
+    text-align: center;
+}
+.chefs h2 ,span{
+    font-size: 50px;
+    font-weight: 500;
+    font-family: "Amatic SC", sans-serif;
+    
+}
+.chefs span{
+   color: #CE1212;
+    
+}
+.chefs p{
+   color: #7F7F90;
+    
+}
+
+.cards{
+    display: flex;
+    justify-content: space-between;
+}
+.cards .card {
+    overflow: hidden;
+    margin-block:20px ;
+    box-shadow: 3px 3px 15px 0px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 30%;
+    border-radius: 10px;
+    transition: transform 0.5s;
+    
+    position: relative;
+
+}
+.cards .card .action {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    content: "";
+    width: 50px;
+    height: 32%;
+    background-color: #E2D9D266;
+    z-index: 3;
+    position: absolute;
+    top: 20px;
+    right: -50px;
+    transition: right  0.1s ;
+    
+
+}
+.cards .card .action i{
+    color: #7F7F9090;
+    cursor: pointer;
+    transition: color 0.5s;
+    
+}
+.cards .card .action i:hover{
+color: black;
+}
+
+.cards .card:hover {
+    transform: scale(1.1);
+
+}
+.cards .card:hover .action {
+    right: 10px;
+    transition: right 0.5s 0.5s ;
+    
+
+}
+
+.cards .card .image{
+    height: 70%;
+
+}
+.cards .card .image img{
+    width: 100%;
+    border-radius: 10px;
+    position: relative;
+
+}
+.cards .card .image {
+    overflow: hidden;
+    
+    position: relative;
+
+}
+
+.cards .card .image::before{
+    content: "";
+    position: absolute;
+    bottom: 0;
+ 
+    background-image: url(../images/team-shape.svg);
+    background-repeat: repeat-x;
+    width: 100%;
+    height: 3.75rem;
+    z-index: 1;
+    
+
+}
+.cards .card .content{
+    padding: 10px;
+    
+
+}
+
+/* end chefs */
