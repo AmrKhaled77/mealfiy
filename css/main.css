@@ -8,12 +8,15 @@
 
 }
 
-
+*{
+    padding: 0;
+    margin: 0;
+}
 
 
 body{
     font-family:var(--font-default) ;
-    background-color: gray;
+  
     padding: 0;
     margin: 0;
 }
@@ -26,6 +29,11 @@ a{
     text-decoration: none;
 }
 
+.CONTAINER{
+    width: 85%;
+    margin: auto;
+}
+
 
 
 
@@ -33,12 +41,14 @@ a{
 
 
 
-/* start header  */
+/* start nav  */
 
 .nav{
     background-color: white;
     height: 90px;
-    position: fixed;
+    top: 0;
+   position: fixed;
+   z-index: 999;
     width: 100%;
     box-shadow: 0px 0px 14px 0px #0000001b;
    
@@ -169,4 +179,135 @@ li{
     margin: 0;
 }
 
+/* end nav  */
+
+
+
+
+/* start header  */
+
+
+.header{
+    position: relative;
+    display: flex;
+    align-items: center;
+    top: 90px;
+    background-color: #EEEEEE;
+    min-height:  100vb;
+}
+
+.header-body{
+  
+   height: 100%;
+   width: 85%;
+   margin: auto;
+    display: flex;
+    
+    align-items: center;
+    justify-content: space-between;
+    
+}
+
+.header-body h2{
+    font-family: "Amatic SC", sans-serif;
+    font-weight: 700;
+    font-size: 65px;
+color: #3A374C;
+padding-bottom: 35px;
+    
+ 
+
+}
+.header .right-section{
+    
+        width: 40%;
+    }
+.header .right-section button{
+    
+   
+    
+        border: 0;
+       padding: 0.8rem 2rem;
+        background-color: var(--color-primary);
+        border-radius: 0 50px 50px 50px;
+        transition: color 1s;
+        cursor: pointer;
+    }
+
+
+.header .right-section button:hover{
+   background-color: #E61414;
+   
+    }
+
+.header .right-section button a{
+    color: white;
+    font-size: 16px;
+    }
+
+.header .left-section{
+    display: flex;
+    justify-content: flex-end;
+
+    width: 50%;
+}
+.header .left-section img{
+    filter: drop-shadow(rgba(0, 0, 0, 0.667) 4px 4px 9px);
+  width: 80%;
+}
+.btn-groupe{
+    
+    display: flex;
+    min-height: 100px;
+    align-items: center;
+    column-gap: 50px;
+ 
+
+}
+
+.btn-groupe .icon {
+    background-color: white;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+  text-align: center;
+ 
+   
+  }
+
+.btn-groupe .icon i {
+width: 100%;
+ 
+   
+  }
+
+  .video-btn{
+    display: flex;
+    align-items: center;
+    column-gap: 10px;
+    cursor: pointer;
+    transition: 0.7s;
+  }
+
+  .video-btn:hover{
+   color: var(--color-primary);
+  }
+  .video-btn:hover a{
+   color: var(--color-primary);
+  }
+  .video-btn a{
+   color: black;
+   font-weight: 600;
+   font-size: 16px;
+   transition: 0.7s;
+}
+
+  }
+
+   
+  
+
+ 
 /* end header  */
