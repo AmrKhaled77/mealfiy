@@ -11,6 +11,7 @@
 *{
     padding: 0;
     margin: 0;
+    box-sizing: border-box;
 }
 
 
@@ -275,6 +276,8 @@ padding-bottom: 35px;
     display: flex;
     align-items: center;
   text-align: center;
+  position: relative;
+  z-index: 1;
  
    
   }
@@ -291,6 +294,19 @@ width: 100%;
     column-gap: 10px;
     cursor: pointer;
     transition: 0.7s;
+    position: relative;
+  }
+  .half-circle{
+    content: "";
+    position: absolute;
+    width: 65px;
+    height: 32px;
+    border-radius: 0   0 32px  32px ;
+    transform: rotate(90deg);
+    background-color: var(--color-primary);
+   left: -24px;
+
+
   }
 
   .video-btn:hover{
@@ -306,7 +322,8 @@ width: 100%;
    transition: 0.7s;
 }
 
-  }
+
+
 
    
   
@@ -320,24 +337,23 @@ width: 100%;
 /* start chefs */
 
 .chefs{
-    height: 400px;
-    background-color: #E61414;
+   
 }
-.chefs .title{
+ .title{
     padding-block: 6%;
     text-align: center;
 }
-.chefs h2 ,span{
+.title h2 ,span{
     font-size: 50px;
     font-weight: 500;
     font-family: "Amatic SC", sans-serif;
     
 }
-.chefs span{
-   color: #CE1212;
+.title span{
+   color: var(--color-primary);
     
 }
-.chefs p{
+.title p{
    color: #7F7F90;
     
 }
@@ -356,6 +372,7 @@ width: 100%;
     transition: transform 0.5s;
     
     position: relative;
+    margin-bottom: 7%;
 
 }
 .cards .card .action {
@@ -432,3 +449,358 @@ color: black;
 }
 
 /* end chefs */
+
+
+
+
+
+/* start gallery */
+
+.gallary{
+    background-color: #EEEEEE;
+    padding-bottom: 7%;
+}
+
+.gallary-conatiner{
+    width: 85%;
+    margin: auto;
+}
+
+
+
+.gallry-mosanry{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    max-height: 66rem;
+    flex-direction: column;
+    
+    
+    align-content: center;
+   
+    
+    
+}
+
+.gallry-item{
+    width: 30%;
+    background-color: white;
+    overflow: hidden;
+    
+   
+  
+}  
+
+
+.gallry-item img:hover{
+    transform: scale(1.1);
+   
+  
+}   
+.gallry-item img{
+    transition: 0.5s;
+   
+   overflow: hidden;
+    width: 100%;
+    border: solid white 6px;
+    display: block;
+    
+   
+  
+}
+
+.gallry-item:nth-child(3n+1){
+  
+   
+}
+.gallry-item:nth-child(3n+2){
+    
+}
+.gallry-item:nth-child(3n+0){
+  
+ 
+    
+}
+.item1{
+
+    
+}
+.item2{}
+.item3{}
+.item4{}
+.item5{}
+.item6{}
+
+
+
+
+
+
+
+/* end gallery */
+
+
+
+/* start contact */
+
+
+.contact{
+    background-color: white;
+}
+
+.contact .map{
+    margin-block: 16px;
+    height: 400px;
+    width: 100%;
+}
+.contact .map iframe{
+    height: 350px;
+    width: 100%;
+}
+
+.contact .items {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-bottom: 30px;
+}
+
+
+.contact .items .item{
+    margin: 8px 0;
+background-color: #F5F5F5;
+height: 6rem;
+    width: 48.67%;
+    display: flex;
+    align-items: center;
+}
+.contact .items .item .circule{
+background-color: var(--color-primary);
+    width: 45px;
+    height: 50px;
+    border-radius: 50%;
+   margin-left: 30px;
+   margin-right: 20px;
+    position: relative;
+}
+.contact .items .item .circule i{
+position: absolute;
+top: 50%;
+left: 50%;
+transform: translate(-50% ,-50%);
+color: white;
+}
+.contact .card{
+    margin: 7% 0;
+    box-shadow: 0 0 1.875rem #00000014;
+    color: white;
+    width: 100%;
+    height: 500px;
+}
+
+
+
+form{
+    
+   
+text-align: center;
+
+}
+
+form .inner{
+   
+ margin: 20px;
+ flex-wrap: wrap;
+ display: flex;
+ justify-content: space-between;
+ 
+
+}
+
+form input{
+    margin-block: 10px;
+    width: 48.6%;
+    padding: 14px;
+    border: 2px solid #EEEEEE;
+    outline: none;
+    
+    
+}
+
+input:focus{
+    border: 2px solid var(--color-primary);
+    transition: border-color 0.3s ease;
+}
+
+textarea:focus {
+    border: 2px solid var(--color-primary);
+  }
+
+  
+#subject{
+   width: 100%;
+}
+
+textarea{
+    outline: none;
+    
+    height: 180px;
+    margin-block: 10px;
+    width: 100%;
+    padding: 14px;
+    border: 2px solid #EEEEEE;
+    
+}
+
+.contact button{
+    border: 0;
+    color: white;
+    background-color: var(--color-primary);
+    padding: 15px 50px;
+    border-radius: 30px;
+    transition: color 0.5s;
+    cursor: pointer;
+}
+.contact button:hover{
+   
+    background-color: #E61414;
+    
+}
+
+/* end contact */
+
+
+
+/* start footer  */
+
+.footer{
+    background-size: contain;
+    background-position: center;
+    overflow: hidden;
+ 
+    height: 360px;
+    width: 100%;
+   background-image: linear-gradient(#0009, #0009), url("../images/textured-metal-background.jpg");
+}
+
+.full{
+    display: flex;
+    justify-content: space-between;
+    padding: 3% 0 20px 0 ;
+}
+.full p ,h4,h3{
+  
+    color: white;
+}
+.full h4{
+    width: fit-content;
+    margin: auto;
+    
+}
+
+
+.left{
+width: 23%;
+}
+.LOGO{
+    display: flex;
+    align-items: center;
+}
+.left .image{
+width: 50px;
+}
+.left .image img{
+width: 100%;
+}
+.left .LOGO .logo a{
+    color: white;
+width: 100%;
+}
+.icons{
+    display: flex;
+    justify-content: space-evenly;
+} 
+.icons  i{
+    margin-block: 8%;
+    color: white;
+}
+
+
+
+.middel{
+    width: 48%;
+}
+.middel form{
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+}
+.middel input{
+    padding: 10px 20px ;
+    width: 75%;
+}
+.middel button{
+    background-color: var(--color-primary);
+padding: 10px 20px ;
+}
+.middel button a {
+    margin:1px 0;
+    
+color: white;
+}
+.middel button i {
+    margin:1px 0;
+    
+color: white;
+}
+ .middel .links{
+    
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: start;
+    
+    height: 36%;
+  
+} 
+.middel .links .item{
+    transition: 0.5s;
+   
+    height: 30%;
+    padding-block: 2px;
+  
+    width: 47%;
+ 
+} 
+.middel .links .item:hover{
+   
+    transform: translateX(10px);
+    background-color: #222222;
+ 
+} 
+
+
+
+.right{
+    width: 23%;
+}
+.right .item{
+    margin-block:24px ;
+    
+display: flex;
+align-items: center;
+}
+.right .item i{
+  
+
+color: var(--color-primary);
+margin-right:10px ;
+}
+.right .item a{
+    cursor: pointer;
+  
+
+color: white;
+margin-right:10px ;
+}
+/* end footer  */
