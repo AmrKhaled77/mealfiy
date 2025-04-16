@@ -7,6 +7,9 @@
     --font-secondary: "Inter", sans-serif;
 
 }
+html {
+    scroll-behavior: smooth;
+  }
 
 *{
     padding: 0;
@@ -46,7 +49,7 @@ a{
 
 .nav{
     background-color: white;
-    height: 90px;
+    height: 80px;
     top: 0;
    position: fixed;
    z-index: 999;
@@ -75,10 +78,15 @@ a{
 .logo{
    
 }
-.nav-items{
+/* .nav-items{
 
     display: flexbox;
     
+} */
+.theme-mode .menu{
+    margin-inline:8px ;
+
+    display: none;
 }
 .nav-items ul{
 
@@ -93,9 +101,19 @@ a{
    position: relative;
 
 }
-#selected{
-    color:black;
+.nav-items ul li a:target{
+
+  color:black;
+
 }
+.nav-items ul li:target::after{
+    width: 100%;
+ 
+
+
+   
+}
+
 .nav-items ul li a{
 
 transition: color 0.2s;
@@ -111,21 +129,23 @@ ul{
     padding: 0;
     margin: 0;
 }
+.nav-items ul li a:target::after {
+    width: 100%;
+  }
 
 
-
-.nav-items ul li:hover::after{
+.nav-items ul li a:hover::after{
     width: 100%;
  
 
 
    
 }
-.nav-items ul li::after{
+.nav-items ul li a::after{
 
     content: "";
     width: 0%;
-    height: 2px;
+    height: 2.7px;
     display: block;
     background-color: var(--color-primary);
     margin-top: 7px;
@@ -135,7 +155,7 @@ ul{
 
    
 }
-.nav-items #selected::after{
+/* .nav-items #selected::after{
 
     content: "";
     width: 100%;
@@ -148,7 +168,7 @@ ul{
 
 
    
-}
+} */
 
 
 
@@ -180,6 +200,11 @@ li{
     margin: 0;
 }
 
+.theme-mode a:target{
+    
+    display: flex;
+    flex-direction: column;
+}
 /* end nav  */
 
 
@@ -361,6 +386,8 @@ width: 100%;
 .cards{
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 10px;
 }
 .cards .card {
     overflow: hidden;
@@ -373,6 +400,21 @@ width: 100%;
     
     position: relative;
     margin-bottom: 7%;
+
+}
+.cards .card h3 {
+   
+    color: black;
+
+}
+.cards .card p {
+   
+    color: #7F7F90;
+
+}
+.cards .card .content {
+   
+    padding: 20px;
 
 }
 .cards .card .action {
@@ -402,7 +444,7 @@ color: black;
 }
 
 .cards .card:hover {
-    transform: scale(1.1);
+    transform: scale(1.05);
 
 }
 .cards .card:hover .action {
@@ -413,7 +455,7 @@ color: black;
 }
 
 .cards .card .image{
-    height: 70%;
+
 
 }
 .cards .card .image img{
@@ -430,6 +472,7 @@ color: black;
 }
 
 .cards .card .image::before{
+    
     content: "";
     position: absolute;
     bottom: 0;
@@ -442,11 +485,7 @@ color: black;
     
 
 }
-.cards .card .content{
-    padding: 10px;
-    
 
-}
 
 /* end chefs */
 
@@ -469,21 +508,14 @@ color: black;
 
 
 .gallry-mosanry{
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
-    max-height: 66rem;
-    flex-direction: column;
     
-    
-    align-content: center;
-   
+    columns: 3;
     
     
 }
 
 .gallry-item{
-    width: 30%;
+   
     background-color: white;
     overflow: hidden;
     
@@ -498,6 +530,7 @@ color: black;
   
 }   
 .gallry-item img{
+    
     transition: 0.5s;
    
    overflow: hidden;
@@ -573,6 +606,10 @@ height: 6rem;
     width: 48.67%;
     display: flex;
     align-items: center;
+}
+.contact .items .item h3{
+    color: #7D7D7D;
+   
 }
 .contact .items .item .circule{
 background-color: var(--color-primary);
@@ -678,7 +715,7 @@ textarea{
     background-position: center;
     overflow: hidden;
  
-    height: 360px;
+    height: fit-content;
     width: 100%;
    background-image: linear-gradient(#0009, #0009), url("../images/textured-metal-background.jpg");
 }
@@ -733,15 +770,19 @@ width: 100%;
 .middel form{
    display: flex;
    align-items: center;
-   justify-content: space-between;
+   gap: 10px;
+ 
 }
 .middel input{
     padding: 10px 20px ;
     width: 75%;
 }
 .middel button{
+    height: 45px;
+    width: 125px;
     background-color: var(--color-primary);
-padding: 10px 20px ;
+    border: 0;
+
 }
 .middel button a {
     margin:1px 0;
@@ -770,6 +811,10 @@ color: white;
     padding-block: 2px;
   
     width: 47%;
+ 
+} 
+.middel .links .item i{
+   color: white;
  
 } 
 .middel .links .item:hover{
@@ -803,4 +848,7 @@ margin-right:10px ;
 color: white;
 margin-right:10px ;
 }
+
+
+
 /* end footer  */
