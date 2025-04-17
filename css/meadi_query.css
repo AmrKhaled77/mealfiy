@@ -49,6 +49,15 @@
     }
 
 
+    .side-menu-lable{
+    cursor: pointer;
+        padding: 20px;
+        visibility: visible;
+        
+        
+      
+    }
+
 
  }
 
