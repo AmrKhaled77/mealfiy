@@ -25,6 +25,48 @@
      
     
  }
+
+
+/* :root:has(input[id="HOME"]:checked) .nav-items ul{
+    
+    .nav-items ul li a:target{
+
+        color:var(--body-color2);
+      
+      }
+      .nav-items ul li:target::after{
+          width: 100%;
+       
+      
+      
+         
+      }
+     
+    
+ } */
+
+
+ 
+body:has(#home:target)  #home-link,
+body:has(#chefs:target)  #chefs-link,
+body:has(#gallery:target)  #gallery-link,
+body:has(#contact:target)  #contact-link
+
+
+
+{
+   color: var(--body-color2);
+   text-decoration: underline;
+   text-decoration-color:var(--color-primary) ;
+   text-decoration-thickness:3px ;
+   text-underline-offset: 12px;
+   
+}
+
+
+
+
+
 i{
     color: var(--body-color2);
 }
@@ -48,6 +90,7 @@ body{
 }
 h1,h2,h3,h4,h5,h6{
     font-family: var(--font-secondary);
+    color: var(--body-color2);
 }
 
 
@@ -124,18 +167,10 @@ a{
    position: relative;
 
 }
-.nav-items ul li a:target{
-
-  color:var(--body-color2);
-
-}
-.nav-items ul li:target::after{
-    width: 100%;
- 
 
 
-   
-}
+
+
 
 .nav-items ul li a{
 
@@ -143,12 +178,7 @@ transition: color 0.2s;
 
    color: gray;
 }
-.nav-items ul li :hover{
-    color: black;
 
-
-   
-}
 ul{
     padding: 0;
     margin: 0;
@@ -159,6 +189,7 @@ ul{
 
 
 .nav-items ul li a:hover::after{
+    transition: width 0.5s;
     width: 100%;
  
 
@@ -173,7 +204,7 @@ ul{
     display: block;
     background-color: var(--color-primary);
     margin-top: 7px;
-    transition: width 0.5s;
+   
     
 
 
@@ -361,6 +392,11 @@ width: 100%;
     transition: 0.7s;
     position: relative;
   }
+
+  .video-btn i{
+    color: black;
+    transition: 0.7s;
+  }
   .half-circle{
     content: "";
     position: absolute;
@@ -374,7 +410,7 @@ width: 100%;
 
   }
 
-  .video-btn:hover{
+  .video-btn:hover i{
    color: var(--color-primary);
   }
   .video-btn:hover a{
@@ -663,7 +699,7 @@ color: black;
 .contact .items .item{
     margin: 8px 0;
 background-color: #F5F5F5;
-height: 6rem;
+height: 6.5rem;
     width: 48.67%;
     display: flex;
     align-items: center;
@@ -845,6 +881,7 @@ width: 100%;
     width: 125px;
     background-color: var(--color-primary);
     border: 0;
+    cursor: pointer;
 
 }
 .middel button a {
@@ -912,6 +949,19 @@ color: white;
 margin-right:10px ;
 }
 
+p{
+    
+    color: var(--body-color2);
+}
 
+ div {
+    transition:  0.5s ease;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+ 
 
 /* end footer  */

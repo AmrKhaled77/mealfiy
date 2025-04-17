@@ -32,10 +32,10 @@
        .nav-items ul{
         top: 0;
         align-items: flex-start;
-        width: 35%;
+        width: 50%;
         right: 0;
         height: 100vh;
-        background-color: white;
+        background-color: var(--body-color);
         position: fixed;
     
         list-style: none;
@@ -125,6 +125,14 @@ form input{
     outline: none;
     
     
+}
+
+
+
+.contact .items .item{
+ 
+    width: 100%;
+  
 }
 /* end contact */
 
